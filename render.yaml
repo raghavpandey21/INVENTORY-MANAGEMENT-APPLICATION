@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: inventory-backend
+    runtime: python
+    repo: https://github.com/raghavpandey21/INVENTORY-MANAGEMENT-APPLICATION.git
+    plan: free
+    region: oregon
+    branch: master
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: inventory-db
+          property: connectionString
+      - key: PORT
+        value: 8000
+
+databases:
+  - name: inventory-db
+    region: oregon
+    plan: free
+    databaseName: inventory_db
+    user: admin

@@ -164,14 +164,14 @@ function Orders() {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-800">Orders</h1>
           <p className="text-gray-500">Manage customer orders</p>
         </div>
         <button
           onClick={openCreate}
-          className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+          className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium w-full sm:w-auto"
         >
           <Plus className="w-4 h-4" />
           Create Order
@@ -252,7 +252,7 @@ function Orders() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Add Products</label>
-            <div className="flex gap-2 items-end">
+            <div className="flex flex-col sm:flex-row gap-2 sm:items-end">
               <div className="flex-1">
                 <select
                   value={selectedProduct}
@@ -269,7 +269,7 @@ function Orders() {
                     ))}
                 </select>
               </div>
-              <div className="w-24">
+              <div className="w-full sm:w-24">
                 <input
                   type="number"
                   min="1"
@@ -281,7 +281,7 @@ function Orders() {
               </div>
               <button
                 onClick={addItem}
-                className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-sm whitespace-nowrap"
+                className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-sm whitespace-nowrap w-full sm:w-auto text-center justify-center flex"
               >
                 Add Item
               </button>

@@ -49,11 +49,20 @@ A full-stack inventory management application built with FastAPI, React, and Pos
 
 ## Access URLs
 
+### Live Production Deployments
+| Service | URL |
+|---------|-----|
+| **Frontend Web App** | [https://frontend-snowy-one-51.vercel.app](https://frontend-snowy-one-51.vercel.app) |
+| **Backend API** | [https://inventory-management-application-1.onrender.com](https://inventory-management-application-1.onrender.com) |
+| **API Docs (Swagger)** | [https://inventory-management-application-1.onrender.com/docs](https://inventory-management-application-1.onrender.com/docs) |
+
+### Local Development (Docker / Localhost)
 | Service | URL |
 |---------|-----|
 | Frontend | http://localhost:3000 |
 | Backend API | http://localhost:8000 |
 | API Docs (Swagger) | http://localhost:8000/docs |
+
 
 ## API Reference
 
